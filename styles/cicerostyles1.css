@@ -1,0 +1,254 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	/* Firefox */
+}
+
+img {
+	max-width: 200px;
+	max-height: 200px;
+
+}
+
+
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background: rgb(193, 230, 255);
+
+}
+
+
+header h1 {
+	font-size: 1.9em;
+
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+
+h2 {
+	font-size: 1.2em;
+}
+
+
+/* CONTAINER STYLES*/
+
+#container {
+	max-width: 62.5em;
+	/* 62.5em = 1000px */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* COLUMNS  -- each page is made up of a number of columns using any combination that = 100 */
+.col_nav {
+	float: left;
+	width: 25%;
+	padding: 2% 2% 3% 0;
+	border: black solid 1px
+}
+
+.col_content {
+	float: left;
+	width: 50%;
+	padding: 2% 2% 3% 0;
+}
+
+.col_oration {
+	float: left;
+	width: 75%;
+	padding: 2% 2% 3% 0;
+}
+
+.col_aside {
+	float: left;
+	width: 25%;
+	padding: 2% 2% 3% 0;
+}
+
+
+/* NAV MENU STYLES */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: rgb(162, 184, 255);
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: rgb(61, 61, 61);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+	background-color: #111;
+}
+
+/* Change the link color on hover */
+li a:hover {
+	background-color: #555;
+	color: white;
+}
+
+
+/* FOOTER STYLES */
+
+footer {
+	clear: both;
+}
+
+/* FLOATS */
+
+.left {
+	float: left;
+	margin-right: 1em;
+}
+
+
+
+/* 1st BREAKPOINT */
+@media screen and (max-width: 60em) {
+
+	.col_nav
+
+	/* .col_nav returns at this width and lower to full container width and stops floating  */
+		{
+		width: 95%;
+		float: none;
+	}
+
+	.col_content
+
+	/* .col_content changes at this width and lower to 70%  */
+		{
+		clear: left;
+		width: 70%;
+	}
+
+	.col_oration
+
+	/* .col_oration changes at this width and lower to 100%  */
+		{
+		clear: left;
+		width: 100%;
+	}
+
+
+	.col_aside
+
+	/* .col_aside changes at this width and lower to 30%  */
+		{
+		width: 30%;
+	}
+
+	header h1 {
+		font-size: 1.5em;
+		margin-top: 0px;
+	}
+
+	h1 {
+		font-size: 1.2em;
+		margin-top: 0px;
+	}
+
+	h2 {
+		font-size: .9em;
+		margin-top: 0px;
+	}
+
+
+	nav ul li
+
+	/* navigation menu at this width becomes horizontal */
+		{
+		float: left;
+		display: inline-block;
+		padding: .5em 1em .5em 1em;
+		border: 1px dotted #000;
+	}
+
+
+}
+
+
+/* 2nd BREAKPOINT */
+@media screen and (max-width: 50em) {
+
+	.col_nav
+
+	/* columns return at this width and lower to full container width and stop floating  */
+		{
+		width: 100%;
+		float: none;
+	}
+
+	.col_content {
+		width: 100%;
+		float: none;
+	}
+
+	.col_oration {
+		width: 100%;
+		float: none;
+	}
+
+	.col_aside {
+		width: 100%;
+		float: none;
+	}
+
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+	background-color: rgb(162, 184, 255);
+	color: rgb(22, 76, 255);
+	cursor: pointer;
+	padding: 10px;
+	width: 50%;
+	text-align: center;
+	border: black solid;
+	outline: none;
+	transition: 0.4s;
+
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+	background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+	padding: 0 118px;
+	background-color: white;
+	display: none;
+	overflow: hidden;
+}
